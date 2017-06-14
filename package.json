@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-test-app",
+  "version": "1.0.0",
+  "description": "Node Test App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheeSweeney/BuildEmitterExercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheeSweeney/BuildEmitterExercise/issues"
+  },
+  "homepage": "https://github.com/TheeSweeney/BuildEmitterExercise#readme",
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}
