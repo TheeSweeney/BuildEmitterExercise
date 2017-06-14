@@ -1,15 +1,9 @@
-var Emitter = require('./emitter')
-var eventConfig = require('./config').events
+var http = require('http');
 
-var emtr = new Emitter();
+http.createServer(function(req, res) {
 
-emtr.on(eventConfig.GREET, function(){
-  console.log('Off in the distance, someone said Hello.')
-})
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello world\n');
 
-emtr.on(eventConfig.GREET, function(){
-  console.log("There was a greeting.")
-})
 
-console.log("Hello")
-emtr.emit(eventConfig.GREET)//
+}).listen(1337, '127.0.0.1');
