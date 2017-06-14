@@ -17,7 +17,7 @@ http.createServer(function(req, res) {
     res.end(JSON.stringify(obj))
   }
 
-
- 
+  res.writeHead(412);
+  res.end('I am a teapot'); 
 
 }).listen(1337, '127.0.0.1');
