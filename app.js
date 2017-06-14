@@ -3,12 +3,19 @@ var fs = require('fs')
 
 http.createServer(function(req, res) {
 
-  res.writeHead(200, {'Content-Type': 'application/json'});
-  var obj = {
-    firstname: 'Brian',
-    lastname: 'Sweeney'
+  if(req.url === '/'){
+    fs.createReadStream( __dirname + '/index.html').pipe(res);
   }
-  res.end(JSON.stringify(obj))
+
+
+  if(req.url === '/api'){
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    var obj = {
+      firstname: 'Brian',
+      lastname: 'Sweeney'
+    }
+    res.end(JSON.stringify(obj))
+  }
 
 
  
